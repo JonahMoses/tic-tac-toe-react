@@ -6,7 +6,7 @@ class OE extends Component {
 
   render() {
     return (
-      <div>OE</div>
+      <li className="o">o</li>
     );
   }
 }

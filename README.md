@@ -1,12 +1,16 @@
-Create Tic Tac Toe in react
+Tic Tac Toe in react
 
 todo:
- - Render when a user clicks on an element.
- - Keep track of which player's turn there is: X or O
-    - Should you render an X or an O
+ - Render game pieces
+ - Handle Click Events
+    - Render X and O on click.
+ - Keep track of which player's turn: X or O
 
-Nice to Have:
- - Score Board
- - Message for who's turn it is.
- - Win Condition?
- - Clear the board
+Bonuses round
+ - Win Condition
+ - Reset the board
+ - Keep Track of User's Scores
+ - Display who's turn it is.
+
+Super Mega Bonus:
+ - Computer Player?

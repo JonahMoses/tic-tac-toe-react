@@ -6,7 +6,7 @@ class Ex extends Component {
 
   render() {
     return (
-      <div>Ex</div>
+      <li className="x">x</li>
     );
   }
 }
