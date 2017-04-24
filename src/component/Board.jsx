@@ -7,55 +7,24 @@ class Board extends Component {
 
   constructor(props, context) {
     super(props, context);
-
-    this.state = {
-      board: props.size,
-    }
-  }
-
-  handlePieceClick(x, y) {
-    const boardCache = this.state.board
-    boardCache[x][y] = this.props.player.piece
-
-    this.props.updateGame()
-    this.setState({
-      board: boardCache
-    })
   }
 
   render() {
-    const {board} = this.state
 
     return (
       <div>
         <ul id="game">
-          {board.map((row, x) => {
-            return row.map((box, y) => {
+          <Oe />
+          <Oe />
+          <Oe />
 
-              const pieceProps = {
-                handleBoardClick: this.handlePieceClick.bind(this),
-                key: x + y,
-                x,
-                y,
-              }
+          <Blank />
+          <Blank />
+          <Blank />
 
-              if (box === -1) {
-                return <Blank {...pieceProps}/>
-              }
-
-              if (box === 'o') {
-                return <Oe {...pieceProps}/>
-              }
-
-              if (box === 'x') {
-                return <Ex {...pieceProps}/>
-              }
-
-              return <Blank {...pieceProps}/>
-
-            })
-          })}
-
+          <Ex />
+          <Ex />
+          <Ex />
         </ul>
       </div>
     );

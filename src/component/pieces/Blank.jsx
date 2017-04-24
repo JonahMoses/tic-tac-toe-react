@@ -1,12 +1,15 @@
 import React, {Component, PropTypes} from 'react'
 
 class Blank extends Component {
-  static propTypes = {}
+  static propTypes = {
+    x: PropTypes.number,
+    y: PropTypes.number,
+  }
+
   static defaultProps = {}
 
   handleClick = () => {
-    const {x, y} = this.props
-    this.props.handleBoardClick(x, y)
+    console.log('piece click')
   }
 
   render() {
