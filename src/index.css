@@ -52,3 +52,8 @@ body {
 #game > li:hover {
   background: #f9f9f9;
 }
+
+#player {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}

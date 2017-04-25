@@ -2,14 +2,18 @@ import React, {Component, PropTypes} from 'react'
 
 class Blank extends Component {
   static propTypes = {
-    x: PropTypes.number,
-    y: PropTypes.number,
+    index: PropTypes.number
   }
 
   static defaultProps = {}
 
+  constructor(props, context) {
+    super(props, context);
+  }
+
   handleClick = () => {
-    console.log('piece click')
+    console.log('Blank piece clicked with index of:')
+    console.log(this.props.index)
   }
 
   render() {
