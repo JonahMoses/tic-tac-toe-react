@@ -4,7 +4,7 @@ import {Ex, Oe, Blank} from './pieces'
 class Grid extends Component {
   static propTypes = {
     gridLayout: PropTypes.array,
-    handlePieceChange: PropTypes.func
+    handleBoardChange: PropTypes.func
   }
 
   static defaultProps = {
@@ -18,7 +18,7 @@ class Grid extends Component {
     let determinePiece = (id, index) => {
       let props = {
         index: index,
-        handlePieceChange: this.props.handlePieceChange
+        handleBoardChange: this.props.handleBoardChange
       }
       
       if (id === 0) {

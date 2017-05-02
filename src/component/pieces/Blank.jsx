@@ -2,7 +2,8 @@ import React, {Component, PropTypes} from 'react'
 
 class Blank extends Component {
   static propTypes = {
-    index: PropTypes.number
+    index: PropTypes.number,
+    handleBoardChange: PropTypes.func
   }
 
   static defaultProps = {}
@@ -12,8 +13,7 @@ class Blank extends Component {
   }
 
   handleClick = () => {
-    console.log('Blank piece clicked with index of:')
-    console.log(this.props.index)
+    this.props.handleBoardChange(this.props.index)
   }
 
   render() {

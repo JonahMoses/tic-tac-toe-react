@@ -12,14 +12,10 @@ export default class EntityDetailContainer extends Component {
     super(props)
   }
 
-  handlePieceChance = (index, pieceType) => {
-    this.props.handleBoardChange(index, pieceType)
-  }
-
   render () {
     let gridLayout = { 
       gridLayout: this.props.gridLayout,
-      handlePieceChance: this.handlePieceChance 
+      handleBoardChange: this.props.handleBoardChange
     }
 
     return (

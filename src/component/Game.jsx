@@ -3,12 +3,10 @@ import Board from './Board'
 
 class Game extends Component {
   static propTypes = {
-    player: PropTypes.number,
-    turnCount: PropTypes.number,
+    turnCount: PropTypes.number
   }
   
   static defaultProps = {
-    player: 1,
     turnCount: 0
   }
 
@@ -18,7 +16,6 @@ class Game extends Component {
 
   render() {
     const childProps = {
-      player: this.props.player,
       turnCount: this.props.turnCount
     }
 
