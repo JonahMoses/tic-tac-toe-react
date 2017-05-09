@@ -1,12 +1,3 @@
-// Accept a gridLayout
-// determine player 1 or player 2 winner
-//
-
-const determineWinner = (gridLayout, player) => {
-  return horizontalWin(gridLayout, player) || verticalWin(gridLayout, player) || diagonalWin(gridLayout, player)
-}
-
-// function to check if horizontally won
 const horizontalWin = (gridLayout, player) => {
   for ( let i = 0; i < 3; i++) {
     let j = i*3
@@ -18,7 +9,6 @@ const horizontalWin = (gridLayout, player) => {
   }
 }
 
-// function to check if vertically won
 const verticalWin = (gridLayout, player) => {
   for ( let i = 0; i < 3; i++) {
     if (gridLayout[i] === player) {
@@ -29,7 +19,6 @@ const verticalWin = (gridLayout, player) => {
   }
 }
 
-// function to check if diagonially won
 const diagonalWin = (gridLayout, player) => {
   if (gridLayout[0] === player) {
     if (gridLayout[0] === gridLayout[4] && gridLayout[4] === gridLayout[8]) {
@@ -43,5 +32,10 @@ const diagonalWin = (gridLayout, player) => {
     }
   }
 }
+
+const determineWinner = (gridLayout, player) => {
+  return horizontalWin(gridLayout, player) || verticalWin(gridLayout, player) || diagonalWin(gridLayout, player)
+}
+
 
 export default determineWinner

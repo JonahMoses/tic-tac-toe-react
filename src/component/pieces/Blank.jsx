@@ -8,10 +8,6 @@ class Blank extends Component {
 
   static defaultProps = {}
 
-  constructor(props, context) {
-    super(props, context);
-  }
-
   handleClick = () => {
     this.props.handleBoardChange(this.props.index)
   }

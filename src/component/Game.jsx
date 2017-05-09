@@ -10,10 +10,6 @@ class Game extends Component {
     turnCount: 0
   }
 
-  constructor(props, context) {
-    super(props, context);
-  }
-
   render() {
     const childProps = {
       turnCount: this.props.turnCount

@@ -8,10 +8,6 @@ export default class EntityDetailContainer extends Component {
     handleBoardChange: PropTypes.func
   }
 
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     let gridLayout = {
       gridLayout: this.props.gridLayout,

@@ -7,13 +7,6 @@ class Grid extends Component {
     handleBoardChange: PropTypes.func
   }
 
-  static defaultProps = {
-  }
-
-  constructor(props, context) {
-    super(props, context);
-  }
-
   render() {
     let determinePiece = (id, index) => {
       let props = {

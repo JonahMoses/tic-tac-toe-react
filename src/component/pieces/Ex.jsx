@@ -1,8 +1,6 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
 
 class Ex extends Component {
-  static propTypes = {}
-  static defaultProps = {}
 
   render() {
     return (
