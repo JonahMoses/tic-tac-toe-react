@@ -12,7 +12,7 @@ const horizontalWin = (gridLayout, player) => {
     let j = i*3
     if (gridLayout[j] === player) {
       if (gridLayout[j] === gridLayout[j+1] && gridLayout[j+1] === gridLayout[j+2]) {
-       return true 
+       return true
       }
     }
   }
@@ -23,7 +23,7 @@ const verticalWin = (gridLayout, player) => {
   for ( let i = 0; i < 3; i++) {
     if (gridLayout[i] === player) {
       if (gridLayout[i] === gridLayout[i+3] && gridLayout[i+3] === gridLayout[i+6]) {
-       return true 
+       return true
       }
     }
   }
@@ -33,17 +33,15 @@ const verticalWin = (gridLayout, player) => {
 const diagonalWin = (gridLayout, player) => {
   if (gridLayout[0] === player) {
     if (gridLayout[0] === gridLayout[4] && gridLayout[4] === gridLayout[8]) {
-      return true 
+      return true
     }
   }
 
   if (gridLayout[2] === player) {
     if (gridLayout[2] === gridLayout[4] && gridLayout[4] === gridLayout[6]) {
-      return true 
+      return true
     }
   }
 }
 
 export default determineWinner
-
-

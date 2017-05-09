@@ -20,7 +20,6 @@ class Grid extends Component {
         index: index,
         handleBoardChange: this.props.handleBoardChange
       }
-      
       if (id === 0) {
         return <Blank {...props} />
       }

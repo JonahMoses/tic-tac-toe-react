@@ -5,7 +5,7 @@ class Game extends Component {
   static propTypes = {
     turnCount: PropTypes.number
   }
-  
+
   static defaultProps = {
     turnCount: 0
   }
