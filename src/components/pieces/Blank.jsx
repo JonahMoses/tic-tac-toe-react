@@ -1,12 +1,11 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types';
 
 class Blank extends Component {
   static propTypes = {
     index: PropTypes.number,
     handleBoardChange: PropTypes.func
   }
-
-  static defaultProps = {}
 
   handleClick = () => {
     this.props.handleBoardChange(this.props.index)

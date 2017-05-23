@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, {Component} from 'react'
+import PropTypes from 'prop-types';
 import {Ex, Oe, Blank} from './pieces'
 
 class Grid extends Component {
@@ -14,13 +15,13 @@ class Grid extends Component {
         handleBoardChange: this.props.handleBoardChange
       }
       if (id === 0) {
-        return <Blank {...props} />
+        return <Blank key={index} {...props} />
       }
       if (id === 1) {
-        return <Ex />
+        return <Ex key={index} />
       }
       if (id === 2) {
-        return <Oe />
+        return <Oe key={index} />
       }
     }
 
@@ -29,7 +30,7 @@ class Grid extends Component {
         <ul id="game">
           {
             this.props.gridLayout.map(function(pieceId, index) {
-              { return determinePiece(pieceId, index) }
+              return determinePiece(pieceId, index)
             })
           }
         </ul>

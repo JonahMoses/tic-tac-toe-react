@@ -1,16 +1,12 @@
-import React, {Component, PropTypes} from 'react'
-import determineWinner from '../utils/gameWinner'
-import GridContainer from '../containers/GridContainer'
+import React, {Component} from 'react'
+import determineWinner from '../utils/GameWinner'
+import Board from '../components/Board'
 
 const newBoardLayout = () => {
   return [0, 0, 0, 0, 0, 0, 0, 0, 0]
 }
 
-class Board extends Component {
-  static propTypes = {
-    turnCount: PropTypes.number,
-    handlePlayerChange: PropTypes.func
-  }
+class GameContainer extends Component {
 
   constructor(props, context) {
     super(props, context);
@@ -18,7 +14,6 @@ class Board extends Component {
       player: 1,
       gridLayout: newBoardLayout()
     }
-    this.newGame = this.newGame.bind(this)
   }
 
   newGame = () => {
@@ -59,36 +54,22 @@ class Board extends Component {
     this.setState( stateChange )
   }
 
-  playerText = () => {
-    if (this.state.winner) {
-      return <div id="winner">{`Player ${this.state.player} wins the game!`}</div>
-    } else {
-      return <div id="player">{`Player ${this.state.player} turn!`}</div>
-    }
-  }
-
   render() {
-    let gridLayout = {
-      player: this.props.player,
+
+    const boardProps = {
+      newGame: this.newGame,
+      handleBoardChange: this.handleBoardChange,
       gridLayout: this.state.gridLayout,
-      handleBoardChange: this.handleBoardChange
+      player: this.state.player,
+      winner: this.state.winner
     }
 
     return (
       <div>
-        <button id='new-game' onClick={this.newGame}>
-          Start New Game
-        </button>
-
-        <div id="player">
-          { this.playerText() }
-        </div>
-
-        <GridContainer { ...gridLayout } />
-
+        <Board {...boardProps} />
       </div>
-    )
+    );
   }
 }
 
-export default Board
+export default GameContainer
